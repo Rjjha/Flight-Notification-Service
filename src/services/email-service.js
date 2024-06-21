@@ -19,6 +19,7 @@ async function sendEmail(mailFrom, mailTo, subject, text) {
 }
 
 async function createTicket(data) {
+  console.log(data);
   try {
     const response = await ticketRepo.create(data);
     return response;
@@ -38,8 +39,18 @@ async function getPendingEmails() {
   }
 }
 
+async function getTodaysTickets(today) {
+  try {
+    const response = await ticketRepo.getTodaysTickets(today);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   sendEmail,
   createTicket,
   getPendingEmails,
+  getTodaysTickets
 };

@@ -13,21 +13,29 @@ module.exports = (sequelize, DataTypes) => {
   }
   Ticket.init(
     {
-      subject: {
+      bookingId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      recipientEmail: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      content: {
-        type: DataTypes.STRING,
+      departureTime: {
+        type: DataTypes.DATE,
         allowNull: false,
       },
-      recepientEmail: {
-        type: DataTypes.STRING,
+      arrivalTime: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
+      noOfSeats: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       status: {
         type: DataTypes.ENUM,
-        values: ["PENDING", "SUCCESS", "FAILED"],
+        values: ["PENDING", "BOOKED", "CANCELLED"],
         defaultValue: "PENDING",
         allowNull: false,
       },
