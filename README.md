@@ -18,3 +18,8 @@ This service is responsible for sending notifications to users. When a booking i
         - `recipientEmail`: The email of the user
         - `subject`: The subject of the email
         - `content`: The message of the email
+          
+# Notification_DB
+![notificationdb](https://github.com/Rjjha/Flight-Notification-Service/assets/96972257/427965d4-d16b-412e-8b34-05359e5e69ba)
+
+
